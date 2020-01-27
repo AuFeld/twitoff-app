@@ -1,11 +1,15 @@
 from flask import Flask
 
-app = Flask(__name__)
+def create_app():
+	app = Flask(__name__)
 
-@app.route('/')
-def home(): 
-	#deployed model goes here
-	return "<h1>Hello, World!</h1>"
+	@app.route('/')
+	def index():
+		return 'Index Page'
 
-if __name__ == "__main__":
-	app.run(debug=True, port = 8080)
+	@app.route('/hello')
+	def hello():
+		return render_template('base.html', title='hello')
+		
+	return app
+
