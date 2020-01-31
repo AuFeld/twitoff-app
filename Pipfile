@@ -13,6 +13,10 @@ tweepy = "*"
 python-decouple = "*"
 python-dotenv = "*"
 scikit-learn = "*"
+gunicorn = "*"
+psycopg2 = "*"
+py-config = "*"
+psycop2 = "*"
 
 [requires]
 python_version = "3.7"
